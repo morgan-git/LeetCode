@@ -1,10 +1,12 @@
+<?php
+
 class LuckyInteger {
 
     /**
      * @param Integer[] $arr
      * @return Integer
      */
-    function findLucky($arr) {
+    function findLucky(array $arr) {
        
         $counts = array_count_values($arr);
         $lucky_ints = [];
@@ -22,3 +24,4 @@ class LuckyInteger {
         return -1;
     }
 }
+
