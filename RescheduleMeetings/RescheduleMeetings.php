@@ -1,34 +1,14 @@
-3439. Reschedule Meetings for Maximum Free Time I
-Solved
-Medium
-Topics
-premium lock icon
-Companies
-Hint
-You are given an integer eventTime denoting the duration of an event, where the event occurs from time t = 0 to time t = eventTime.
-
-You are also given two integer arrays startTime and endTime, each of length n. These represent the start and end time of n non-overlapping meetings, where the ith meeting occurs during the time [startTime[i], endTime[i]].
-
-You can reschedule at most k meetings by moving their start time while maintaining the same duration, to maximize the longest continuous period of free time during the event.
-
-The relative order of all the meetings should stay the same and they should remain non-overlapping.
-
-Return the maximum amount of free time possible after rearranging the meetings.
-
-Note that the meetings can not be rescheduled to a time outside the event.
-
- 
 <?php 
-class Solution {
+class RescheduleMeetings {
 
     /**
-     * @param Integer $eventTime
-     * @param Integer $k
-     * @param Integer[] $startTime
-     * @param Integer[] $endTime
-     * @return Integer
+     * @param int $eventTime
+     * @param int $k
+     * @param array $startTime
+     * @param array $endTime
+     * @return int
      */
-    function maxFreeTime($eventTime, $k, $startTime, $endTime) {
+    function maxFreeTime(int $eventTime, int $k, array $startTime, array $endTime) {
         $n = count($startTime);
         $durations = [];
         for ($i = 0; $i < $n; $i++) {
