@@ -2,7 +2,12 @@
 require_once 'ListNode.php'; 
 
 class AddTwo {
-    function addTwoNumbers(array $l1, array $l2) {
+    /**
+     * @param int[] $l1
+     * @param int[] $l2
+     * @return ListNode | null
+     */
+    public function addTwoNumbers(array $l1, array $l2) {
         $dummy = new ListNode(0);
         $ll1 = $dummy->buildList($l1);
         $ll2 = $dummy->buildList($l2);
