@@ -8,7 +8,7 @@ class RescheduleMeetings {
      * @param array $endTime
      * @return int
      */
-    function maxFreeTime(int $eventTime, int $k, array $startTime, array $endTime) {
+    public function maxFreeTime(int $eventTime, int $k, array $startTime, array $endTime) {
         $n = count($startTime);
         $durations = [];
         for ($i = 0; $i < $n; $i++) {

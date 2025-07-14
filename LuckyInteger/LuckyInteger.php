@@ -6,7 +6,7 @@ class LuckyInteger {
      * @param Integer[] $arr
      * @return Integer
      */
-    function findLucky(array $arr) {
+    public function findLucky(array $arr) {
        
         $counts = array_count_values($arr);
         $lucky_ints = [];
