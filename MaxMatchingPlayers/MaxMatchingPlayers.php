@@ -2,11 +2,11 @@
 class MaxMatchingPlayers {
 
     /**
-     * @param array $players
-     * @param array $trainers
+     * @param int[] $players
+     * @param int[] $trainers
      * @return int
      */
-    function matchPlayersAndTrainers(array $players, array $trainers) {
+    public function matchPlayersAndTrainers(array $players, array $trainers) {
         $last_i = $count = 0;
 
         sort($players);
