@@ -1,10 +1,10 @@
 <?php 
-class Solution {
+class ClearDigits {
     /**
      * @param string $s
      * @return string
      */
-    function clearDigits($s) {
+    public function clearDigits(string $s): string {
         $char_stack = [];
 
         for ($i = 0; $i < strlen($s); $i++) {
