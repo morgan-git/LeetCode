@@ -3,8 +3,8 @@
 class LuckyInteger {
 
     /**
-     * @param Integer[] $arr
-     * @return Integer
+     * @param int[] $arr
+     * @return int
      */
     public function findLucky(array $arr) {
        
