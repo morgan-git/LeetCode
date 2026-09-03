@@ -1,9 +1,5 @@
 3307. Find the K-th Character in String Game II
-Attempted
-Hard
-Topics
-premium lock icon
-Companies
+
 Hint
 Alice and Bob are playing a game. Initially, Alice has a string word = "a".
 
