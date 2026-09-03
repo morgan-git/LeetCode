@@ -1,45 +1,25 @@
-<?php 
-
-class kthCharacter {
-
+<?php
+class Solution {
     /**
-     * @param int $k
-     * @param int[] $operations
-     * @return string
+     * @param Integer $k
+     * @param Integer[] $operations
+     * @return String
      */
-    function applyOperations(int $k, array $operations) {
-        $word = "a";
+    public function kthCharacter($k, $operations) {
+        $shift = 0;
+        $n = count($operations);
+        $max_i = min($n - 1, 46);
         
-        foreach ($operations AS $jj=>$kk){
-            if ($kk === 0){
-                $word .= $word;
-            } else if ($kk == 1){
-                $word = $this->appendShiftedLetters($word);
+        for ($i = $max_i; $i >= 0; $i--) {
+            $half = 1 << $i;
+            if ($k > $half) {
+                $k -= $half;
+                if ($operations[$i] == 1) {
+                    $shift++;
+                }
             }
         }
         
-        return substr($word, $k-1, 1);
+        return chr(ord('a') + ($shift % 26));
     }
-
-
-    function appendShiftedLetters(string $word) {
-        $result = $word;
-        
-        for ($i = 0; $i < strlen($word); $i++) {
-            $char = $word[$i];
-            
-            if (ctype_lower($char)) {
-                $next = $char === 'z' ? 'a' : chr(ord($char) + 1);
-            } elseif (ctype_upper($char)) {
-                $next = $char === 'Z' ? 'A' : chr(ord($char) + 1);
-            } else {
-                $next = $char; // non-alphabet characters stay the same
-            }
-
-            $result .= $next;
-        }
-
-        return $result;
-    }
-
 }

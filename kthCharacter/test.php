@@ -5,8 +5,8 @@ require("KthCharacter.php");
 $k = 5;
 $operations = [0,0,0];
 
-$kth = new kthCharacter();
-$answer = $kth->applyOperations($k, $operations);
+$kth = new Solution();
+$answer = $kth->kthCharacter($k, $operations);
 
 var_dump($answer);
-//Expected Outout a
+//Expected Output: a
